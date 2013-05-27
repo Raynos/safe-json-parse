@@ -16,7 +16,7 @@ safeParse("{}", function (err, json) {
 })
 
 safeparse("WRONG", function (err) {
-    /* we have err */
+    /* we have err! */
 })
 ```
 
