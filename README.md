@@ -30,6 +30,7 @@ safeparse("WRONG", function (err) {
 
 ## MIT Licenced
 
+
   [1]: https://secure.travis-ci.org/Raynos/safe-json-parse.png
   [2]: https://travis-ci.org/Raynos/safe-json-parse
   [3]: https://david-dm.org/Raynos/safe-json-parse.png
