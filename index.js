@@ -1,6 +1,4 @@
-var maybeCallback = require("continuable/maybe-callback")
-
-module.exports = maybeCallback(SafeParse)
+module.exports = SafeParse
 
 function SafeParse(obj, reviver) {
     return function (callback) {
