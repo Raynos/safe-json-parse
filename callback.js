@@ -1,6 +1,6 @@
-module.exports = SafeParse
+module.exports = SafeParseCallback
 
-function SafeParse(obj, reviver, callback) {
+function SafeParseCallback(obj, reviver, callback) {
     if (arguments.length === 2) {
         callback = reviver
         reviver = null

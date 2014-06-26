@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/safe-json-parse.git",
-  "main": "index",
+  "main": "callback",
   "homepage": "https://github.com/Raynos/safe-json-parse",
   "contributors": [
     {

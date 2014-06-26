@@ -6,10 +6,10 @@
 
 Parse JSON safely without throwing
 
-## Example
+## Example (callback)
 
 ```js
-var safeParse = require("safe-json-parse")
+var safeParse = require("safe-json-parse/callback")
 
 safeParse("{}", function (err, json) {
     /* we have json */
@@ -18,6 +18,27 @@ safeParse("{}", function (err, json) {
 safeparse("WRONG", function (err) {
     /* we have err! */
 })
+```
+
+## Example (tuple)
+
+```js
+var safeParse = require("safe-json-parse/tuple")
+
+var tuple1 = safeParse("{}")
+var json = tuple1[1] /* we have json */
+
+var tuple2 = safeparse("WRONG")
+var err = tuple[0] /* we have err! */
+
+var tuple3 = safeParse(something)
+if (tuple3[0]) {
+    var err = tuple3[0]
+    // handle err
+} else {
+    var json = tuple3[1]
+    // handle json
+}
 ```
 
 ## Installation
