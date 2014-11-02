@@ -29,7 +29,7 @@ var tuple1 = safeParse("{}")
 var json = tuple1[1] /* we have json */
 
 var tuple2 = safeparse("WRONG")
-var err = tuple[0] /* we have err! */
+var err = tuple2[0] /* we have err! */
 
 var tuple3 = safeParse(something)
 if (tuple3[0]) {
@@ -37,6 +37,28 @@ if (tuple3[0]) {
     // handle err
 } else {
     var json = tuple3[1]
+    // handle json
+}
+```
+
+## Example (result)
+
+```js
+var Result = require('raynos-rust-result')
+var safeParse = require('safe-json-parse/result')
+
+var result1 = safeParse("{}")
+var json = Result.Ok(result1) /* we have json */
+
+var result2 = safeparse("WRONG")
+var err = Result.Err(result2) /* we have err! */
+
+var result3 = safeParse(something)
+if (Result.ifErr(result3)) {
+    var err = Result.Err(result3)
+    // handle err
+} else if (Result.ifOk(result3)) {
+    var json = Result.Ok(result3)
     // handle json
 }
 ```
