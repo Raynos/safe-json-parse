@@ -16,7 +16,9 @@
     "url": "https://github.com/Raynos/safe-json-parse/issues",
     "email": "raynos2@gmail.com"
   },
-  "dependencies": {},
+  "dependencies": {
+    "raynos-rust-result": "0.1.0-improvement3"
+  },
   "devDependencies": {
     "tape": "~1.0.2"
   },

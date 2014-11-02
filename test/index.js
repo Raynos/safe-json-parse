@@ -1,7 +1,9 @@
 var test = require("tape")
+var Result = require("raynos-rust-result")
 
 var safeParse = require("../callback")
 var safeParseTuple = require("../tuple")
+var safeParseResult = require("../result")
 
 test("safeParse is a function", function (assert) {
     assert.equal(typeof safeParse, "function")
@@ -40,6 +42,24 @@ test("safeParseTuple faulty", function (assert) {
 
     assert.ok(t[0])
     assert.equal(t[0].message, "Unexpected token W")
+
+    assert.end()
+})
+
+test("safeParseResult valid json", function (assert) {
+    var t = safeParseResult("{ \"foo\": true }")
+
+    assert.ifError(Result.isErr(t))
+    assert.equal(Result.Ok(t).foo, true)
+
+    assert.end()
+})
+
+test("safeParseResult faulty", function (assert) {
+    var t = safeParseResult("WRONG")
+
+    assert.ok(Result.Err(t))
+    assert.equal(Result.Err(t).message, "Unexpected token W")
 
     assert.end()
 })
