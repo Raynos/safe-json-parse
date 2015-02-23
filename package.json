@@ -17,7 +17,7 @@
     "email": "raynos2@gmail.com"
   },
   "dependencies": {
-    "raynos-rust-result": "0.1.0-improvement3"
+    "rust-result": "^1.0.0"
   },
   "devDependencies": {
     "tape": "~1.0.2"

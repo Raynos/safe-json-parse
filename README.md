@@ -44,7 +44,7 @@ if (tuple3[0]) {
 ## Example (result)
 
 ```js
-var Result = require('raynos-rust-result')
+var Result = require('rust-result')
 var safeParse = require('safe-json-parse/result')
 
 var result1 = safeParse("{}")

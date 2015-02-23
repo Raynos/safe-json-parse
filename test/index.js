@@ -1,5 +1,5 @@
 var test = require("tape")
-var Result = require("raynos-rust-result")
+var Result = require("rust-result")
 
 var safeParse = require("../callback")
 var safeParseTuple = require("../tuple")

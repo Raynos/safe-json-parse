@@ -1,4 +1,4 @@
-var Result = require('raynos-rust-result');
+var Result = require('rust-result');
 
 module.exports = SafeParseTuple
 
