@@ -54,10 +54,10 @@ var result2 = safeparse("WRONG")
 var err = Result.Err(result2) /* we have err! */
 
 var result3 = safeParse(something)
-if (Result.ifErr(result3)) {
+if (Result.isErr(result3)) {
     var err = Result.Err(result3)
     // handle err
-} else if (Result.ifOk(result3)) {
+} else if (Result.isOk(result3)) {
     var json = Result.Ok(result3)
     // handle json
 }
