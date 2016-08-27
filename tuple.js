@@ -5,7 +5,8 @@ function SafeParseTuple(obj, reviver) {
     var error = null
 
     try {
-        json = JSON.parse(obj, reviver)
+    		var parseData = JSON.stringify(obj);
+        json = JSON.parse(parseData, reviver)
     } catch (err) {
         error = err
     }
