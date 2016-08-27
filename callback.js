@@ -9,7 +9,8 @@ function SafeParseCallback(obj, reviver, callback) {
     var json
 
     try {
-        json = JSON.parse(obj, reviver)
+        var parseData = JSON.stringify(obj);
+        json = JSON.parse(parseData, reviver)
     } catch (err) {
         return callback(err)
     }
